@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MuseumActivity">
+
+    <TextView
+        android:id="@+id/museumName"
+        android:layout_width="407dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#070707"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="345dp"
+        android:layout_height="239dp"
+        android:onClick="goToWebsite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/museumName"
+        app:srcCompat="@drawable/new_muse" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="298dp"
+        android:layout_height="182dp"
+        android:layout_marginBottom="16dp"
+        android:animationCache="true"
+        android:background="#FFFFFF"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="210dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="4dp"
+            android:background="#6CEC91"
+            android:text="@string/buttonText"
+            android:textColor="#EA0E0E"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Calculate Ticket Price" />
+
+        <TextView
+            android:id="@+id/Subtotal"
+            android:layout_width="121dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/subtotal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
+
+        <TextView
+            android:id="@+id/Tax"
+            android:layout_width="99dp"
+            android:layout_height="27dp"
+            android:text="@string/tax"
+            app:layout_constraintBottom_toTopOf="@+id/Total"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Subtotal" />
+
+        <TextView
+            android:id="@+id/Total"
+            android:layout_width="153dp"
+            android:layout_height="34dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/total"
+            android:textColor="#2842CD"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="272dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <TextView
+            android:id="@+id/studentlabel"
+            android:layout_width="108dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/student_ticket"
+            android:textColor="#FF2727"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="student $15" />
+
+        <Spinner
+            android:id="@+id/student_spinner"
+            android:layout_width="134dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="16dp"
+            android:background="#F6A7A7"
+            android:entries="@array/tickets"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/studentlabel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/seniorLabel"
+            android:layout_width="99dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="@string/senior_ticket"
+            android:textColor="#FF2727"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/adultlabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/studentlabel"
+            app:layout_constraintVertical_bias="0.541"
+            tools:text="senior $18" />
+
+        <Spinner
+            android:id="@+id/senior_spinner"
+            android:layout_width="129dp"
+            android:layout_height="23dp"
+            android:background="#F6A7A7"
+            android:entries="@array/tickets"
+            app:layout_constraintBottom_toTopOf="@+id/adult_spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.821"
+            app:layout_constraintStart_toEndOf="@+id/seniorLabel"
+            app:layout_constraintTop_toBottomOf="@+id/student_spinner"
+            app:layout_constraintVertical_bias="0.557" />
+
+        <TextView
+            android:id="@+id/adultlabel"
+            android:layout_width="96dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/adult_ticket"
+            android:textColor="#FF2727"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="adult $23" />
+
+        <Spinner
+            android:id="@+id/adult_spinner"
+            android:layout_width="129dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginBottom="16dp"
+            android:background="#F6A7A7"
+            android:entries="@array/tickets"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/adultlabel" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

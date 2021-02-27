@@ -1,0 +1,31 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string name = "app_name">NYC Museums</string>
+    <string name = "student_ticket">student $15</string>
+    <string name = "senior_ticket">senior $18</string>
+    <string name = "adult_ticket">adult $23</string>
+    <string name = "buttonText">Calculate Ticket Price</string>
+
+    <string name = "ticket_warning">Max is 5 tickets for each</string>
+
+    <string name = "subtotal">Subtotal: </string>
+    <string name = "tax">Tax: </string>
+    <string name = "total">Total: </string>
+
+    <string name = "app_name_museum">Museum Tickets</string>
+
+    <string-array  name= "MuseumsList" >
+        <item>New Museum</item>
+        <item>Museum of Modern Art</item>
+        <item>American Museum of Natural History</item>
+        <item>Brooklyn Museum</item>
+        <item>The Met Cloisters</item>
+    </string-array>
+    <string-array name ="tickets" >
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+</resources>
